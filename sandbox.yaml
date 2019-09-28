@@ -1,0 +1,24 @@
+graphs:
+
+  - nodes:
+    - id: app
+      module: timeflux_ui.nodes.ui
+      class: UI
+      params:
+        routes:
+          master: master
+          siblings: siblings
+          starwars: starwars
+          bumpers: bumpers
+        port: 9393
+#        host: 0.0.0.0
+
+    - id: display
+      module: timeflux.nodes.debug
+      class: Display
+
+    edges:
+      - source: app:events
+        target: display
+
+    rate: 20

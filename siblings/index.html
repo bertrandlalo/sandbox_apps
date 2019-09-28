@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--     <link rel="stylesheet" href="assets/css/darkly_bootstrap.css">
+ -->    
+    <link rel="stylesheet" href="/common/assets/css/bulma.min.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+
+    <title>Breath'siblings </title>
+</head>
+<body>
+<div class="screen-wrapper block" id="registration">
+    <div class="centered">
+        <form id="player-registration-form">
+            <label for="name">Enter your name </label>
+            <div class="control">
+            <input type="text" class="input" id="player-name"/>
+        </div>
+            <!--        <a href="#" class="btn btn-info" id="submit-registration-form">Submit</a>-->
+            <!--        <button class="btn btn-success" type="submit" value="Submit" id="submit-registration-form"/>-->
+            <button type="button" class="button is-info" id="submit-registration-form">Submit</button>
+
+            <!--        <input class="button" type="submit" value="Submit" id="submit-registration-form"/>-->
+        </form>
+    </div>
+</div>
+<div class="screen-wrapper block" id="waiting-room">
+    <!--    <div id="loading" class="loader">.</div>-->
+    <h1 class="centered" id="welcome-message"></h1>
+</div>
+
+<div class="screen-wrapper block" id="exercise-siblings-ball">
+    <div class="square centered" id="siblings-ball"></div>
+</div>
+<div class="screen-wrapper" id="evaluation-siblings-ball">
+    <div class="hiddenCB block">
+        <div class="centered">
+
+            <h3>Select your siblings</h3>
+            <fieldset id="sibling-choices">
+            </fieldset>
+            <button type="button" class="button is-info" id="submit-siblings">Submit</button>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="screen-wrapper" id="exercise-decision-making">
+    <canvas  id="dots-canvas">Your browser does not support canvas.</canvas>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ -->
+<!-- <script src="assets/js/movin_bowls.js"></script> -->
+<script src="/common/assets/js/timeflux.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js"></script>
+<!--<script src="assets/js/pixijs_test.js"></script>-->
+
+<!--<script>-->
+<!--    document.getElementById('player-registration-form').onsubmit = function () {-->
+<!--        console.log(document.getElementById('player-name').value);-->
+<!--        return false;-->
+<!--    };-->
+<!--</script>-->
+  <script type="text/javascript">
+    let type = "WebGL"
+    if(!PIXI.utils.isWebGLSupported()){
+      type = "canvas"
+    }
+    PIXI.utils.sayHello(type)
+  </script>
+</body>
+</html>
